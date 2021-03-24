@@ -19,8 +19,8 @@ import com.nukkitx.protocol.bedrock.BedrockPacket;
 import com.nukkitx.protocol.bedrock.data.entity.EntityLinkData;
 import com.nukkitx.protocol.bedrock.handler.BedrockPacketHandler;
 import com.nukkitx.protocol.bedrock.packet.*;
-import dev.waterdog.player.PlayerRewriteUtils;
 import dev.waterdog.network.rewrite.types.RewriteData;
+import dev.waterdog.player.PlayerRewriteUtils;
 import dev.waterdog.player.ProxiedPlayer;
 
 import java.util.ListIterator;

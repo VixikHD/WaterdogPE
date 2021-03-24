@@ -24,8 +24,8 @@ import dev.waterdog.network.rewrite.BlockMapModded;
 import dev.waterdog.network.rewrite.types.BlockPalette;
 import dev.waterdog.network.rewrite.types.RewriteData;
 import dev.waterdog.network.session.SessionInjections;
-import dev.waterdog.utils.exceptions.CancelSignalException;
 import dev.waterdog.player.ProxiedPlayer;
+import dev.waterdog.utils.exceptions.CancelSignalException;
 
 import javax.crypto.SecretKey;
 import java.net.URI;

@@ -15,13 +15,13 @@
 
 package dev.waterdog;
 
+import dev.waterdog.logger.MainLogger;
 import io.netty.util.ResourceLeakDetector;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.LoggerContext;
 import org.apache.logging.log4j.core.config.Configuration;
 import org.apache.logging.log4j.core.config.LoggerConfig;
-import dev.waterdog.logger.MainLogger;
 
 public class WaterdogPE {
 
@@ -46,12 +46,8 @@ public class WaterdogPE {
             logger.warning("Unknown build id. Custom build? Unofficial builds should be not run in production!");
         }
 
-        if (VersionInfo.IS_DEVELOPMENT) {
-            setLoggerLevel(Level.DEBUG);
-        }
-
         try {
-            ProxyServer server = new ProxyServer(logger, DATA_PATH, PLUGIN_PATH);
+            new ProxyServer(logger, DATA_PATH, PLUGIN_PATH);
         } catch (Exception e) {
             logger.logException(e);
         }

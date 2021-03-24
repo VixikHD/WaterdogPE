@@ -18,7 +18,6 @@ package dev.waterdog.command.defaults;
 import com.nukkitx.protocol.bedrock.data.command.CommandData;
 import com.nukkitx.protocol.bedrock.data.command.CommandParam;
 import com.nukkitx.protocol.bedrock.data.command.CommandParamData;
-import com.nukkitx.protocol.bedrock.data.command.CommandParamType;
 import dev.waterdog.command.Command;
 import dev.waterdog.command.CommandSender;
 import dev.waterdog.command.CommandSettings;

@@ -29,12 +29,12 @@ import dev.waterdog.network.rewrite.types.RewriteData;
 import dev.waterdog.network.session.ServerConnection;
 import dev.waterdog.network.session.SessionInjections;
 import dev.waterdog.player.PlayerRewriteUtils;
+import dev.waterdog.player.ProxiedPlayer;
 import dev.waterdog.utils.exceptions.CancelSignalException;
 import dev.waterdog.utils.types.TranslationContainer;
 import it.unimi.dsi.fastutil.longs.Long2LongMap;
 import it.unimi.dsi.fastutil.longs.LongSet;
 import it.unimi.dsi.fastutil.objects.ObjectSet;
-import dev.waterdog.player.ProxiedPlayer;
 
 import javax.crypto.SecretKey;
 import java.net.URI;

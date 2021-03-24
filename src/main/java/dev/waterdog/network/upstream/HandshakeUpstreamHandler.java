@@ -27,9 +27,9 @@ import dev.waterdog.VersionInfo;
 import dev.waterdog.event.defaults.PlayerPreLoginEvent;
 import dev.waterdog.network.protocol.ProtocolConstants;
 import dev.waterdog.network.protocol.ProtocolVersion;
-import dev.waterdog.player.HandshakeUtils;
 import dev.waterdog.network.session.LoginData;
 import dev.waterdog.player.HandshakeEntry;
+import dev.waterdog.player.HandshakeUtils;
 import dev.waterdog.player.ProxiedPlayer;
 
 import java.io.ByteArrayInputStream;

@@ -16,11 +16,11 @@
 package dev.waterdog.plugin;
 
 import dev.waterdog.ProxyServer;
+import dev.waterdog.utils.exceptions.PluginChangeStateException;
 import it.unimi.dsi.fastutil.objects.Object2ObjectArrayMap;
 import it.unimi.dsi.fastutil.objects.Object2ObjectMap;
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.constructor.CustomClassLoaderConstructor;
-import dev.waterdog.utils.exceptions.PluginChangeStateException;
 
 import java.io.File;
 import java.io.IOException;

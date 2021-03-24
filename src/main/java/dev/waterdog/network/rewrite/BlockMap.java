@@ -23,11 +23,11 @@ import com.nukkitx.protocol.bedrock.data.entity.EntityData;
 import com.nukkitx.protocol.bedrock.data.entity.EntityDataMap;
 import com.nukkitx.protocol.bedrock.handler.BedrockPacketHandler;
 import com.nukkitx.protocol.bedrock.packet.*;
-import io.netty.buffer.AbstractByteBufAllocator;
-import io.netty.buffer.ByteBuf;
 import dev.waterdog.network.rewrite.types.BlockPaletteRewrite;
 import dev.waterdog.network.rewrite.types.RewriteData;
 import dev.waterdog.player.ProxiedPlayer;
+import io.netty.buffer.AbstractByteBufAllocator;
+import io.netty.buffer.ByteBuf;
 
 public class BlockMap implements BedrockPacketHandler {
 

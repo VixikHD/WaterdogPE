@@ -18,11 +18,16 @@ package dev.waterdog.utils;
 import dev.waterdog.logger.MainLogger;
 import lombok.AllArgsConstructor;
 
-import java.io.*;
-
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.*;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public abstract class Configuration {
 

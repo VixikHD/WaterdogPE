@@ -18,13 +18,12 @@ package dev.waterdog.command.defaults;
 import com.nukkitx.protocol.bedrock.data.command.CommandData;
 import com.nukkitx.protocol.bedrock.data.command.CommandParam;
 import com.nukkitx.protocol.bedrock.data.command.CommandParamData;
-import com.nukkitx.protocol.bedrock.data.command.CommandParamType;
 import dev.waterdog.command.Command;
 import dev.waterdog.command.CommandSender;
 import dev.waterdog.command.CommandSettings;
 import dev.waterdog.network.ServerInfo;
-import dev.waterdog.utils.types.TextContainer;
 import dev.waterdog.player.ProxiedPlayer;
+import dev.waterdog.utils.types.TextContainer;
 
 import java.util.Collections;
 

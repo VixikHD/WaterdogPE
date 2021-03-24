@@ -17,9 +17,9 @@ package dev.waterdog.command;
 
 import dev.waterdog.ProxyServer;
 import dev.waterdog.utils.types.TextContainer;
+import dev.waterdog.utils.types.TranslationContainer;
 import it.unimi.dsi.fastutil.objects.Object2ObjectMap;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
-import dev.waterdog.utils.types.TranslationContainer;
 
 public class SimpleCommandMap implements CommandMap {
 

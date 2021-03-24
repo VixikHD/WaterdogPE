@@ -17,7 +17,6 @@ package dev.waterdog.utils;
 
 import dev.waterdog.ProxyServer;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 import net.cubespace.Yamler.Config.InvalidConfigurationException;
 

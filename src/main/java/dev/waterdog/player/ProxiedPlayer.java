@@ -17,8 +17,13 @@ package dev.waterdog.player;
 
 import com.google.common.base.Preconditions;
 import com.google.common.base.Strings;
-import com.nukkitx.protocol.bedrock.*;
-import com.nukkitx.protocol.bedrock.packet.*;
+import com.nukkitx.protocol.bedrock.BedrockClient;
+import com.nukkitx.protocol.bedrock.BedrockPacket;
+import com.nukkitx.protocol.bedrock.BedrockServerSession;
+import com.nukkitx.protocol.bedrock.packet.ResourcePacksInfoPacket;
+import com.nukkitx.protocol.bedrock.packet.SetTitlePacket;
+import com.nukkitx.protocol.bedrock.packet.TextPacket;
+import com.nukkitx.protocol.bedrock.packet.TransferPacket;
 import dev.waterdog.ProxyServer;
 import dev.waterdog.command.CommandSender;
 import dev.waterdog.event.defaults.*;
@@ -45,8 +50,6 @@ import it.unimi.dsi.fastutil.objects.*;
 
 import java.net.InetSocketAddress;
 import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.atomic.AtomicBoolean;

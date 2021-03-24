@@ -20,11 +20,6 @@ import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import com.nukkitx.protocol.bedrock.BedrockClient;
 import com.nukkitx.protocol.bedrock.BedrockServer;
 import dev.waterdog.command.*;
-import dev.waterdog.packs.PackManager;
-import dev.waterdog.utils.types.*;
-import lombok.SneakyThrows;
-import net.cubespace.Yamler.Config.InvalidConfigurationException;
-import org.apache.logging.log4j.Level;
 import dev.waterdog.console.TerminalConsole;
 import dev.waterdog.event.EventManager;
 import dev.waterdog.event.defaults.DispatchCommandEvent;
@@ -33,6 +28,7 @@ import dev.waterdog.network.ProxyListener;
 import dev.waterdog.network.ServerInfo;
 import dev.waterdog.network.protocol.ProtocolConstants;
 import dev.waterdog.network.protocol.ProtocolVersion;
+import dev.waterdog.packs.PackManager;
 import dev.waterdog.player.PlayerManager;
 import dev.waterdog.player.ProxiedPlayer;
 import dev.waterdog.plugin.PluginManager;
@@ -42,8 +38,11 @@ import dev.waterdog.utils.ConfigurationManager;
 import dev.waterdog.utils.LangConfig;
 import dev.waterdog.utils.ProxyConfig;
 import dev.waterdog.utils.config.ServerList;
+import dev.waterdog.utils.types.*;
+import lombok.SneakyThrows;
+import net.cubespace.Yamler.Config.InvalidConfigurationException;
+import org.apache.logging.log4j.Level;
 
-import java.io.File;
 import java.net.InetSocketAddress;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -89,19 +88,14 @@ public class ProxyServer {
         this.pluginPath = Paths.get(pluginPath);
         this.packsPath = this.dataPath.resolve("packs");
 
-        if (!this.pluginPath.toFile().exists()) {
+        if (this.pluginPath.toFile().mkdirs()) {
             this.logger.info("Created Plugin Folder at " + this.pluginPath.toString());
-            this.pluginPath.toFile().mkdirs();
         }
-
-        if (!this.packsPath.toFile().exists()) {
+        if (this.packsPath.toFile().mkdirs()) {
             this.logger.info("Created Packs Folder at " + this.packsPath.toString());
-            this.packsPath.toFile().mkdirs();
         }
 
-        ThreadFactoryBuilder builder = new ThreadFactoryBuilder();
-        builder.setNameFormat("WaterdogTick Executor");
-        this.tickExecutor = Executors.newScheduledThreadPool(1, builder.build());
+        this.tickExecutor = Executors.newScheduledThreadPool(1, new ThreadFactoryBuilder().setNameFormat("WaterdogTick Executor").build());
 
         this.configurationManager = new ConfigurationManager(this);
         this.configurationManager.loadProxyConfig();
@@ -114,7 +108,9 @@ public class ProxyServer {
         if (this.getConfiguration().isDebug()) {
             WaterdogPE.setLoggerLevel(Level.DEBUG);
         }
+
         this.configurationManager.loadLanguage();
+
         // Default Handlers
         this.reconnectHandler = new VanillaReconnectHandler();
         this.joinHandler = new VanillaJoinHandler(this);
